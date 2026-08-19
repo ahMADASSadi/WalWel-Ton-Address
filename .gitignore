@@ -1,0 +1,7 @@
+
+*.venv 
+*.ruff*
+
+*__pycache__*
+
+*.lock
