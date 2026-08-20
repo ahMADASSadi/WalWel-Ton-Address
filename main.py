@@ -157,9 +157,9 @@ def format_transactions(transactions: list[dict[str, Any]]) -> None:
         print("No transactions found.")
         return
 
-    print("\n" + "=" * 80)
-    print("TRANSACTION HISTORY")
-    print("=" * 80)
+    print("-" * 10)
+    print("transaction history")
+    print("-" * 10)
 
     for index, tx in enumerate(transactions, start=1):
         tx_id = tx.get("transaction_id", {})
@@ -189,7 +189,7 @@ def format_transactions(transactions: list[dict[str, Any]]) -> None:
         destination = in_msg.get("destination") or account
 
         print(f"\n[{index}] Incoming Transaction")
-        print("-" * 80)
+        print("-" * 10)
         print(f"Time:          {timestamp}")
         print(f"LT:            {lt}")
         print(f"Hash:          {tx_hash}")
@@ -214,7 +214,7 @@ def format_transactions(transactions: list[dict[str, Any]]) -> None:
         else:
             print("\nOutgoing:      None")
 
-    print("\n" + "=" * 80)
+    print("-" * 10)
 
 
 def load_mnemonic_from_file(filepath: str) -> str:
